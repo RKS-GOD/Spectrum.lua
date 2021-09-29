@@ -39,12 +39,12 @@ callbacks.Register( "Draw", "handleUpdates", function()
 		end
 		draw.SetFont(updaterfont1);
 		draw.Color(255,150,75,255 - fadeout);
-		draw.Text(7 - 650 + fadein, 7, "Sestain's");
+		draw.Text(7 - 650 + fadein, 7, "Spectrum.lua");
 		draw.Color(225,225,225,255 - fadeout);
-		draw.Text(7 + draw.GetTextSize("Sestain's ") - 650 + fadein, 7, "Script");
+		draw.Text(7 + draw.GetTextSize("Spectrum.lua ") - 650 + fadein, 7, "Scripts");
 		draw.Color(255,150,75,255 - fadeout);
-		draw.Text(7 + draw.GetTextSize("Sestain's Script  ") - 650 + fadein, 7, "\\");
-		spacing = draw.GetTextSize("Sestain's Script  \\  ");
+		draw.Text(7 + draw.GetTextSize("Spectrum.lua Scripts  ") - 650 + fadein, 7, "\\");
+		spacing = draw.GetTextSize("Spectrum.lua Scripts  \\  ");
 		draw.SetFont(updaterfont2);
 		draw.Color(225,225,225,255 - fadeout);
 	end
@@ -131,45 +131,45 @@ cacheAA = {};
 local animation = {
     "                  ",
     "                 s",
-    "                se",
-    "               ses",
-    "              sess",
-    "             sessu",
-    "            sessuh",
-    "           sessuho",
-    "          sessuhoo",
-    "         sessuhook",
-    "        sessuhook ",
-    "       sessuhook  ",
-    "      sessuhook   ",
-    "     sessuhook    ",
-    "    sessuhook     ",
-    "   sessuhook      ",
-    "  sessuhook       ",
-    " sessuhook        ",
-    "sessuhook         ",
-    "essuhook          ",
-    "ssuhook           ",
-    "suhook            ",
-    "uhook             ",
-    "hook              ",
-    "ook               ",
-    "ok                ",
-    "k                 "
+    "                sp",
+    "               spe",
+    "              spec",
+    "             spect",
+    "            spect",
+    "           spectr",
+    "          spectru",
+    "         spectrum",
+    "        spectrum ",
+    "       spectrum  ",
+    "      spectrum   ",
+    "     spectrum    ",
+    "    spectrum     ",
+    "   spectrum      ",
+    "  spectrum       ",
+    " spectrum        ",
+    "spectrum         ",
+    "pectrum          ",
+    "ectrum           ",
+    "ctrum            ",
+    "trum             ",
+    "rum              ",
+    "um               ",
+    "m                ",
+    "                  "
 }
 
 local phrases = {
-    "1'd by Sessuhook",
-    "Sessuhook on top",
-    "Get good get Sessuhook",
-    "Tapping NNs since 2018",
-    "Get owned by Sessuhook",
-    "Haist vittu - Sessuhook"
+    "You Died?",
+    "Spectrum for the WIN",
+    "Join your Spectrum",
+    "You Died? Again?",
+    "Be aware, Spectrum is owning",
+    "Play Like a GOD: Aimware > Spectrum.lua"
 }
 
 --Menu Related/Gui
 local rb_ref = gui.Reference("Ragebot");
-local tab = gui.Tab(rb_ref, "sestain", ("Sestain's Script " .. VERSION_NUMBER));
+local tab = gui.Tab(rb_ref, "spectrum", ("Spectrum.lua Scripts " .. VERSION_NUMBER));
 local gb_main = gui.Groupbox(tab, "Main", 15, 15, 250, 400);
 local enabled = gui.Checkbox(gb_main, "enabled", "Enabled", 1);
 local category = gui.Combobox(gb_main, "category", "Category", "Anti-Aim", "Visuals", "Misc");
@@ -437,8 +437,8 @@ local function Regular()
 		end
 
 		if drawRight == 0 and drawLeft == 0 and drawBack == 0 then
-			local customyaw = gui.GetValue("rbot.sestain.yawangle");
-			local customjitter = gui.GetValue("rbot.sestain.jitteramount");
+			local customyaw = gui.GetValue("rbot.spectrum.yawangle");
+			local customjitter = gui.GetValue("rbot.spectrum.jitteramount");
 			local wellumm = NormalizeYaw(180 - customyaw + customjitter);
 			local wellumm2 = NormalizeYaw(180 - customyaw - customjitter);
 
@@ -519,7 +519,7 @@ local AutoUnmute = function(event)
 	end
 end
 
---Sessuhook clantag
+--Spectrum.lua clantag
 local Clantag = function()
 	if gui.GetValue("rbot.master") and enabled:GetValue() and clantag:GetValue() then
 		local curtime = math.floor(globals.CurTime() * 2.3);
@@ -681,7 +681,7 @@ local IdealTick = function()
 	end
 end
 
---Sessuhook Killsay.
+--Spectrum.lua Killsay.
 local Killsay = function(event)
 	if gui.GetValue("rbot.master") and enabled:GetValue() and killsay:GetValue() then
 		if event:GetName() and event:GetName() == "player_death" then
@@ -1612,51 +1612,7 @@ local function OnUnload()
 	client.Command("echo \";   ..:,.;;;L;L;F...:,;;L;L;FyjjEhK5hKOO8S8SESpObb8OBOpb88bbpO8bb8BbQBQBQQgQQBQBQBQBQbbGpOGnzLrL;,  ,,:.... ..:L;;,;;;;,;;;\"", true);
 	client.Command("echo \";      .;;;;;;;;L:;;;rzyyZFFZGOpG8OQ8Bbb8QBB8bBQBgg8OBbBOBBQBQQGGGGGG@G@G@G@@@@@@@@@@@G@GGQb5yL;;;:. .         ,zc;;;L;;;;;\"", true);
 	client.Command("echo \",     . ;;;;;;;;,;;;cLFzjFzyh3hKShS5OGES88bpGEOhGGGnGhEEOE8bQQQBQBQQgQgQgQQQgQQBQQgQgQQQQBQbOyL:: .,:.  ,;;;;   ;:;;;;;;;,;\"", true);
-	client.Command("echo \",      . ..,:::,,;;L;rLLF7cyZE5SSGoE5GE8pbbBSGEOpGhOp85O8BBgQgQgggQgQgggQgQgQQQgQQQgQQQQQQQQQBKr;:   .;cz5ShSL ...;L,;;;;;;\"", true);
-	client.Command("echo \";       ....,;;,;;;;LLrrzrzLyyZK55OE5hp8bBQpG5hOOhGE8bBbQQQBQQgQgQgggggggQgQgQQQgQgQQQgQQQQBgQQpn;;.  .,.:rF7y,   .;;;;;;;;\"", true);
-	client.Command("echo \";.   . .   ..,;;,;,;;LLz;7zcznZhoOGOE8bBbQQBEEKOGOE88QQBBBbQBgQgggQgggQgQgQgQgQgQgggBQQQBQBQBQQgB5LL;;.. . :;;;c;L;;:;;;;;,\"", true);
-	client.Command("echo \"L.    .   ..,,;,;,;;;;;;L;cLjnhK558OGEBbBQQQbGpEOO8pbQQOBbQQgggggg@ggQgQgBQQggggQQgQQBQQQQQBQBQQgQby,,7  .   ;z8@g@h.:;;;;;\"", true);
-	client.Command("echo \";;   .   ..::;;;,;,;;;;;,;;rzZKEhEObG8pbbQQgb8ObOGpBbQb8pbpQQgg@ggggQQ8BBB8QQQQQBQQgQQQQBQQQQQQg@@gO  :      3j;;LE@7.,;;;;\"", true);
-	client.Command("echo \";L,   .   ..,,;;;;;;;;L;;;;;zzZoS5O8b8bEbbQgQGpOB8SOOS5j5nh5ych53SpGOGESOSEoOOO5O8BbQBQQgQgg@@@gS::;K8G,,;L,nQQoy. Sg:,,;;;\"", true);
-	client.Command("echo \";;;       .,:,,;,;;;;;;L;LLLLyoESOOp8bO8bbBg83SpGB5ncr;;;;;L:,;,,;,,,;rnnpphnKKS5OOpQgQgg@@@b7   ;p@BQbKLjQbQgQb8Z.c@L:;;;;\"", true);
-	client.Command("echo \";;L,      ..,:,,;,;;;;;;LLrLzcyZhGOEp5hpb8QBOcKEOE5;LLL;L,,;;,:.,:,:;,;;;ro8gQgBQQQQgg@gQZ.   rb@ggQBOQbObQggQgBBO;,@F:;;;;\"", true);
-	client.Command("echo \";;;r:      ::,.,:,,L;L;L;;;;,;;;;;;j3oy3KOGBn;yOO8pSz7LFryjL;zKGE88BBgg@@@B8EB@@BQg@QG;   .ng@@@QQBB8pBQBg@@ggggB8;L@c.;;;;\"", true);
-	client.Command("echo \";;;;L.    ..:::.::,;;,;;;,:....   .:,;;;Ljhn;,yhBQ@ggbGzZ3Lnb88OpG88BBQggg@gg3yKppF.   ,8@@g@gQBQbB88ObQgoy8BBQBQBzOb.,,;,;\"", true);
-	client.Command("echo \";;;;;L     .:::,:. ....,.. ..,:,,;,:...;;c;:,LzSb@@@g@bp7.jSKSKF      ;. ,,;;yc;oE.:Lb@@@@QQBQBQbBbb888QE .zSb8BQgGgL.,;;;;\"", true);
-	client.Command("echo \";;;;LL.     :,,,,.      .,LFhOb8BQQO8h3z7;;..,L,;;;FOphByhy,;:.       ;:;FZEbBQ8QBQQ@ggQQQgBBbQBQBb8B88bbz:;noOOBgQQ,.;,;;;\"", true);
-	client.Command("echo \";;;;,,:.     .:,;,.....;LFjKZ5SShjLF7zrL;. c.  ,r7KBB8LLr8S7;;;;LcLcrjSQg@@@gQ8bpbbbQgQgQQQQBbbBBBbBbB88Q@bz;LyohQQQ::,;;;;\"", true);
-	client.Command("echo \";;;;: ......    :::.. ;,;;;:      y.:       . .ZbE8Q@@g.,y38BhjyyFZZES8p8pB8bbQbbQQQQQQQQQQBQbbbQBQbBbbO8g@g5L7ZOQgQ;.;,;;;\"", true);
-	client.Command("echo \";;;L.    . . :.      :,;;;;      .zLcr;;;:... :yKEbQQ@@B.p5,3bOOSGhOOOSOGppbQgBBQgQQQQBQQQQQbb8BQQBBbBbbhBg8c;zObgBg,,,;,;,\"", true);
-	client.Command("echo \";;;;;      ...,::..  ,czyn3oZnczzyn3oZnc;.... ,;ypbQQg@gg;Go3ZohOEO5OOO8b8ObQBBQQBQQQQQQQBQBB8bpQBQQQBBb8SShppQQQpgS.:;;;;;\"", true);
-	client.Command("echo \";;;;;;.    ...:::,,;:.K;.,,;Lz7yyyzyrrLL;;....;;jbBgggg@@@8ggbhEhhK5ZEGOSKySGb8bbBbQQgQgQQQQbQBBpQQQQQBB8phbQgQQpB@z.,;;,;;\"", true);
-	client.Command("echo \";;;;;;r;.   ....:,;;;:;OF.:,;;LrrLr;L;L;;::::;;;GBgggggggg@@@ggbbOOEEhhoh5OObbBBQQQQQQgQQQQQQQQBBBQQQBB8BpOQgBQbQg8c;,;;;;;\"", true);
-	client.Command("echo \";;;;;;;LL;.......:,;;r;;hG7L;L;rLLLc;r;;,,,;;;,;nbQgggQgggg@g@QQ8B88p8O8OBbbbBBQQgggQgQQQQQQBQQQbQbQQQbQbBEbQQQQQ8;,;;;;;;;\"", true);
-	client.Command("echo \";;;;;;;;;;r:  ...:;,;;;;;75hKFyzyFzLc;;;L;L;;;;;yGbQgQgQgQgggQQOo3ESSG8O8pb8QBQBgQgQgQgBQBQBQBQBbBQBQQQbBBbOQbbbgn .;;;;;;;\"", true);
-	client.Command("echo \";;;;;;;;;;;L.. ..::;:;;L;L;LcjyZyZFyzFzzL;,,;;,rjEpQQgQQBgQQBBBQ5r;;LFnK5OOb8bbQBQQgggQQBQBQQQQQbBBQbQQQBB8p8BbQ@O .;;;;;;;\"", true);
-	client.Command("echo \";;;;;;;;;;;;;...:.::;,;;LLyZShGGESEKKjz;,..:;;;;ZSbQgQQQQQQ8bbQQQn;,::;;7ySEppbbBQgQQBQQQbQQQQQQQbBQQBQBQbBObg@@@.::;;;;;;;\"", true);
-	client.Command("echo \",;;;;;;;;;;;;,...:.::;,;;zF535oEo5jycL,.  :;,;,;yppQQgQgQQQQQgggQ8GGy;::,;roS8p88QQQQQBBBQ8QQQBQQQ8QQQBQBB8bObEc  ;;;;;;;;;\"", true);
-	client.Command("echo \";;;;;;;;;;;;;;,.:...::;;L7zj5K5K5ZyrL,.   L;;;;;ch8bQggQgQgggQbObBQBbEj;;:;;ynEE88BBQBQBQQBBQQQBQbQBQBQBBbB8B;    :,LLL;;;;\"", true);
-	client.Command("echo \";;;;;;;;;;;;;L;..:...::;;z7jZ5noK5Zz;;.  :;;;;;zFS8BQgg@QgBbOEnOQgQgBBpOycLL;c7yKGO88BbQBQBQBQQQQQBQBQbQBQbbbO,    ..::,;L;\"", true);
-	client.Command("echo \";,;,;;;;;;;;;;;.......,,LLz7Z333oKEnz;;:;,,:::;LKSp8QggggBbQQQQbQQgQQ8b8b53nc7KK3opOBBQBQBQbBBQBQBQQQBQbQbB8bpby        ;;;\"", true);
-	client.Command("echo \",;,;;;;;;;;;;;;: :.,.::;;LLyy5ZKKh5oFF;;;;;;.. .;ynhObBBZ3SOpBbQQQQQbB8bBQ8QE3KO88ObBQQQBQB8BQQgBQQQbBbBBB8b8pOQO.       ;;\"", true);
-	client.Command("echo \";;;,;,;;;,;;;;L, ..::..:;;rFZZo3ESh3ncrLL;;;;.....,;znhz;zny5O8bQQQBQQQBQQgB8ozy55nhQBQBQBQbBBQQQBQBBb88b8b8bpEOB8.       ;\"", true);
-	client.Command("echo \",;,;;;,;;;;;;;;L...::...:;;cLjZ5oSo53F;;;;,;,;;;;LLyyh5SS5nEOBbgg@@@@@@@Q8Sy7y7y;;LSBQbQBQQQbQBQQQBB8bpB8Bbb88SEGbb;      .\"", true);
-	client.Command("echo \";,;;;;;;;;;,;;;;; ..:....,;;zjSo5KoZ5jL;;;;;;;L;zFE8BQQBQBb88p8OGo3jz;;;73EKno8EF;38QQQBQQQQB8BBQbQbb8bbb8b8bpEKGObBL     .\"", true);
-	client.Command("echo \",;;;;;,;,;;;,;;;;. ..:...,,;rno3j3ZKjzL;;;;;;r7jn35G5Oh5KKjZL; ,...::LhQggggbbO5y5GBBQQQQQBQBQbQBB8b8b8B8B8bpbSEGOGbQ;    .\"", true);
-	client.Command("echo \";,;;;;;;;;;;;;;;L,........,;FFLLnjjynFL,,,;;L;;;;;        ,LjnKGBQgg@@@gQQQQQBbhoEbBQBQBQBBBQBQBB8bpb888bbb888S58EpO8pL.  .\"", true);
-	client.Command("echo \",;,;,;,;;;;;;;;;;L. ...:...;zS;LnonK3KL;:......        jcFZpbQg@ggggQgQQbQQQQQbbG88BBQBQBBbQbBbB8bO8pb8BbB888boSpOOpO8cL: .\"", true);
-	client.Command("echo \";,;,;,;,;;;,;;;;;;;. ...,. :7nZzohpGOE5y;,......;;;;;;888O88BBQQQQQBQQQbQbQQQQQBB8B8bpB8BBB8Q8b8bOp8b8BbBbbO8Ohh8O8ObEz;; .\"", true);
-	client.Command("echo \",;,;,;,;,;;;;;;;;;;; ...:;. :LjyrSObpGhSzL;L;;;,.,;FjooEhOE5KEG8bQBQQQQQBBQQQgQQBQbb8b88bQ888Bp8O88bpb8b88O88OnGE8EOOEL;: .\"", true);
-	client.Command("echo \";,;,;,;,;;;,;,;;;;;;,  ..:;. .Lz77SpbpOZF7c;L;,...:,LcnzLLKn3n5OBBQBQQgBQBBbQQgQQBQ8b8QbBBB8b8bO888pb8b88pb8853EOOOGOK;.. .\"", true);
-	client.Command("echo \",,,;,;;;,;,;;;,;;;;;;:   .,;. .;;LyhhphS7Lr7LL;;,,:;;jK5zyKOEGS88bBQBBbb8BbQBQBQQQQQbbbb8bbbp8p8O8Ob8bpb88ObGSKEGpSpSj.   .\"", true);
-	client.Command("echo \";,;,;,;,;,;,;,;,;;;;;L.   .:;.  ,;7y35Go5;Lc7L7;L;Lco5Go53EEShOG88bO8OppbbQbBQQBQQQbBbB8B8b888b88Ob8B8b8pp8GpSS5pGOGS;.   .\"", true);
-	client.Command("echo \",;,;,;,;,;,;,;;;;;,;;;;.   ..,.. .,LLFzyyF;rLrcyzyz3nKojFF7yjKoEObGESpO88QBQQQBQQQBBbBbBbb88Ob8b8b8B88pbObGOOGEOOGoOy.    .\"", true);
-	client.Command("echo \";,;,;,;,;,;,;,;;;,;,;,;;. .   ... .:::;;L;rcz;nZ33on7;;;LLnKSSpG8p88b8BbQBQQQBQBQBB8bpb8b88Ob8b8bbBpb8b88G888GOGOEG3;     .\"", true);
-	client.Command("echo \",;,;,;,;,;,;,;,;,;;;,;;L;. .   ........:,;;rLcz3h5rL;;;Fzo5OS8Ep8bpBBBBQBQBQBBbB8b8b8bpbO88b8B8b8b8bOb88O8O8pGG8SG3L     ..\"", true);
-	client.Command("echo \",,;,;,,,;,;,;,;,;;;,;,;;;;. . . ..... . .:;;L;LLycL;LLynSSOEEhO8B8bbQBQBQQQBQ8bppO88b8b8b8B88pb88pBpbO8O8p8O8E8hE57.     ..\"", true);
-	client.Command("echo \",,,;,;,;,;,;,;,;,;,;,;,;;;;. ... . ..... ..,,;;;;cL;;7nhZOEEEpO8bB8BbQQQQQbQb8EpO88bO8p88B8b88p8p8pbpbpbp8O8O8OpEj.    . . \"", true);
-	client.Command("echo \",:,,;,;,;,,,;,;,;,;,;,;,;;c;  ... . ....  ..,,;;;;L;LLyjoEOhSOpObOb8BbQbBbbpphGO8pB8b8pb8bbp8O8O8O8p888p8Opp8ObOo.    . . .\"", true);
-	client.Command("echo \":,:,,,,,,;,;,;,,,;,;,;,;;LL   .. ... . ...  .::;,;;L;LLzyOK5oGSOGOpb8bO8GOGhASDADSDSDSDASDSDASDASDASVXVEWETJ%676.    . . ..\"", true);
+
 	set_clantag("", "");
 end
 
