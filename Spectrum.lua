@@ -239,8 +239,8 @@ local idealtick = gui.Checkbox(misc, "idealtick", "Ideal Tick", 0);
 local killsay = gui.Checkbox(misc, "killsay", "Killsay", 0);
 
 --Descriptions
-hudweapon_enable:SetDescription("Made by thekorol.");
-idealtick:SetDescription("From nxzAA by naz.");
+hudweapon_enable:SetDescription("Made by Weedz.");
+idealtick:SetDescription("Be a cancer.");
 
 --Saves values for later
 local function Cache_fn()
@@ -643,7 +643,7 @@ local Gui = function()
 	end
 end
 
---IdealTick from nxzAA by naz
+
 local IdealTick = function()
 	if gui.GetValue("rbot.master") and enabled:GetValue() and idealtick:GetValue() then
     	local quickPeakKey = gui.GetValue("rbot.accuracy.movement.autopeekkey")
@@ -869,7 +869,7 @@ local Visuals = function()
 	end
 end
 
---Scoreboard Equipment by thekorol
+--Scoreboard Equipment by Weedz
 local Score = (function() 
 	--©thekorol
 	local console_handlers = {}
@@ -1609,10 +1609,24 @@ end
 --Executes when script is unloaded.
 local function OnUnload()
 	client.Command("toggleconsole", true);
-	client.Command("echo \";   ..:,.;;;L;L;F...:,;;L;L;FyjjEhK5hKOO8S8SESpObb8OBOpb88bbpO8bb8BbQBQBQQgQQBQBQBQBQbbGpOGnzLrL;,  ,,:.... ..:L;;,;;;;,;;;\"", true);
-	client.Command("echo \";      .;;;;;;;;L:;;;rzyyZFFZGOpG8OQ8Bbb8QBB8bBQBgg8OBbBOBBQBQQGGGGGG@G@G@G@@@@@@@@@@@G@GGQb5yL;;;:. .         ,zc;;;L;;;;;\"", true);
-	client.Command("echo \",     . ;;;;;;;;,;;;cLFzjFzyh3hKShS5OGES88bpGEOhGGGnGhEEOE8bQQQBQBQQgQgQgQQQgQQBQQgQgQQQQBQbOyL:: .,:.  ,;;;;   ;:;;;;;;;,;\"", true);
-
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\"", true);
+	client.Command("echo \"==================================================\"", true);
+	client.Command("echo \"= See You next time King!                        =\"", true);
+	client.Command("echo \"= Spectrum.lua for the win.                      =\"", true);
+	client.Command("echo \"= Thanks for Supporting me, it was very helpful. =\"", true);
+	client.Command("echo \"==================================================\"", true);
 	set_clantag("", "");
 end
 
